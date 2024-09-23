@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: appofapp-atco-ist
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: apps-of-apps-project
+  source:
+    repoURL: git@github.com:fernavila/argocd-example-install.git
+    targetRevision: HEAD
+    path: "./applications/atco-ist"
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: {}
