@@ -7,4 +7,4 @@ argo-cd:
     enabled: false
   server:
     extraArgs:
-      - --insec
+      - --insecure
