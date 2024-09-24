@@ -1,0 +1,23 @@
+# must be on applications/atco-ist in argocd-mgmt-apps-eng
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: "ns-test"
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    tenant.applications.info: "true"
+spec:
+  project: onboarding-project
+  source:
+    repoURL: https://fernavila.github.io/mycharts/helm/charts/
+    chart: helm-base-ns
+    targetRevision: 0.1.0
+    helm:
+      values: |
+        namespace: fernandoavila
+        environment: dev
+        allowedThirdParties: "true"
+  destination:
+    namespace: fernandoavila
