@@ -21,4 +21,4 @@ spec:
         allowedThirdParties: "true"
   destination:
     namespace: fernandoavila
-    server: https://kubernetes.default.svc
+    server: in-cluster
