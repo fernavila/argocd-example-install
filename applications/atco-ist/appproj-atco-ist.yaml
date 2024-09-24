@@ -1,0 +1,13 @@
+# must be on applications/atco-ist in argocd-mgmt-apps-eng
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: "appproj-atco-ist"
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    tenant.applications.bns: true
+spec:
+  sourceRepos:
+  - https://fernavila.github.io/mycharts/helm/charts/
