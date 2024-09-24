@@ -7,7 +7,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   labels:
-    tenant.applications.bns: true
+    tenant.applications.info: "true
 spec:
   sourceRepos:
   - https://fernavila.github.io/mycharts/helm/charts/
