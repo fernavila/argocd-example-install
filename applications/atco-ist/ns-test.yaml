@@ -13,10 +13,11 @@ spec:
   source:
     repoURL: https://fernavila.github.io/mycharts/helm/charts/
     chart: helm-base-ns
-    targetRevision: 0.1.0
+    targetRevision: 0.1.1
     helm:
       values: |
         namespace: fernandoavila
+        serviceTier: "prod"
         environment: dev
         allowedThirdParties: "true"
   destination:
