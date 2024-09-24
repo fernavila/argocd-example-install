@@ -21,4 +21,4 @@ spec:
         allowedThirdParties: "true"
   destination:
     namespace: fernandoavila
-    server: in-cluster
+    name: in-cluster
